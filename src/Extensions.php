@@ -52,7 +52,7 @@ final class Extensions implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetGet(mixed $offset)
+    public function offsetGet($offset): mixed
     {
         if (!$offset instanceof IRI) {
             throw new \InvalidArgumentException(sprintf('Expected an IRI instance as key (got %s).', is_object($offset) ? get_class($offset) : gettype($offset)));
